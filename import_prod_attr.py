@@ -53,7 +53,8 @@ for x,row in enumerate(rows):
                             'attribute_id': key,
                             'value_ids':[(6,False,values)]}
                         attribute_line = models.execute_kw(dbname, uid, pwd, 'product.template.attribute.line', 'create',[vals_attribute_line])
-                    import pdb;pdb.set_trace()
+                        print('############# %s ##################'%(prod_tmpl_id[0]))
+                        #import pdb;pdb.set_trace()
                 dict_attrs = {}
                 name = cell.value
                 prod_tmpl_id = models.execute_kw(dbname,uid,pwd,'product.template','search',[[['name','=',name]]])

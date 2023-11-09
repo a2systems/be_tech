@@ -59,7 +59,7 @@ for x,row in enumerate(rows):
                     field_value = 'service'
             vals[field_name] = field_value
     vals['sale_ok'] = True
-    if vals.get('default_code') and vals.get('default_code') == 'DFAJLI004':
+    if vals.get('default_code'):
         prod_id = models.execute_kw(dbname,uid,pwd,'product.template','search',[[['default_code','=',vals.get('default_code')]]])
         if not prod_id:
             return_id = models.execute_kw(dbname,uid,pwd,'product.template','create',[vals])
